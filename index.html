@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Travel Terpercaya</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Travel Aminin aja</h1>
+        <form id="ticketForm">
+            <label for="nama">Nama Pemesan:</label>
+            <input type="text" id="nama" placeholder="Masukkan nama Anda" required>
+
+            <label for="tujuan">Tujuan:</label>
+            <select id="tujuan" required>
+                <option value="">Pilih Tujuan...</option>
+                <option value="Jakarta">Jakarta</option>
+                <option value="Solo">Solo</option>
+                <option value="Surabaya">Surabaya</option>
+            </select>
+
+            <label for="kelas">Kelas:</label>
+            <select id="kelas" required>
+                <option value="">...</option>
+                <option value="Eksekutif">Eksekutif</option>
+                <option value="Bisnis">Bisnis</option>
+                <option value="Ekonomi">Ekonomi</option>
+            </select>
+
+            <label for="banyak_tiket">Banyak Tiket:</label>
+            <input type="number" id="banyak_tiket" placeholder="Masukkan jumlah tiket" min="1" required>
+
+            <label>Status Member:</label>
+            <div>
+                <input type="radio" id="member" name="status" value="Member" required>
+                <label for="member">Member</label>
+                <input type="radio" id="non_member" name="status" value="Non-Member">
+                <label for="non_member">Non-Member</label>
+            </div>
+
+            <button type="button" onclick="calculateTotal()">Pesan Sekarang</button>
+        </form>
+
+        <div id="output">
+            <h2>Detail Pemesanan</h2>
+            <p><strong>Nama:</strong> <span id="outputNama">-</span></p>
+            <p><strong>Tujuan:</strong> <span id="outputTujuan">-</span></p>
+            <p><strong>Kelas:</strong> <span id="outputKelas">-</span></p>
+            <p><strong>Harga Tiket:</strong> Rp<span id="outputHarga">-</span></p>
+            <p><strong>Subtotal:</strong> Rp<span id="outputSubtotal">-</span></p>
+            <p><strong>Diskon:</strong> Rp<span id="outputDiskon">-</span></p>
+            <p><strong>Total Bayar:</strong> Rp<span id="outputTotal">-</span></p>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
